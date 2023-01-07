@@ -1,6 +1,6 @@
 Raphael Mardean L. Ortega
-Contact Information:
 <pre>
+Contact Information:
 Mobile - 09053248135 
 Email - raphaelmardean.ortega.cics@ust.edu.ph
 </pre>
