@@ -20,6 +20,11 @@ code {
   display: inline-block;
 }
 
+.activeCircle {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
 .circle2 {
   height: 22px;
   width: 22px;
@@ -28,9 +33,19 @@ code {
   background-color: rgb(137, 137, 138);
   padding: 5px;
   border-radius: 50%;
+  /* display: inline-block; */
+  /* margin-bottom: 150px; */
+}
+
+.circleCont {
   display: inline-block;
   line-height: 1.5;
-  /* margin: auto auto; */
+}
+
+.ta {
+  display: inline-block;
+  /* line-height: 1; */
+  /* margin-bottom: -50px; */
 }
 
 /* Navigation Bar */
@@ -51,20 +66,46 @@ code {
 .entry {
   display: inline-block;
   cursor: pointer;
-  height: 50px;
-  line-height: 50px;
+  height: 90px;
+}
 
+.drag {
+  display: inline-block;
+  justify-content: center;
+}
+
+.dragicon {
+  vertical-align: middle;
+  height: 100%;
+}
+
+.subjCont {
+  display: inline-block;
+  line-height: 1.25;
+}
+
+.subject {
+  font-family: 'Poppins';
+  margin-left: 10px;
+}
+
+.subSubj {
+  display: block;
+  margin-left: 10px;
 }
 
 /* Checkbox */
 .checkboxCont {
   display: inline-block;
-  height: 50px;
-  line-height: 50px;
+  padding: 0px 20px;
 }
 
-
+/* .checkboxes {
+  margin: 40px 0px;
+} */
+/*                                */
 .card {
+  justify-content: center;
   align-items: center;
   font-family: 'Poppins';
   text-align: left;
@@ -89,8 +130,8 @@ code {
   border: 2px solid rgb(236, 237, 237);
   border-radius: 8px;
   background-color: rgb(249, 249, 248);
-  padding: 10px 10px;
-  margin: 10px 10px;
+  padding: 15px 10px;
+  margin: 15px 15px;
   line-height: .8;
   display: inline-block;
   text-align: center;
