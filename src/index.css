@@ -11,3 +11,87 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.circle {
+  height: 14px;
+  width: 14px;
+  background-color: rgb(105, 177, 121);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.circle2 {
+  height: 22px;
+  width: 22px;
+  text-align: center;
+  color: white;
+  background-color: rgb(137, 137, 138);
+  padding: 5px;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 1.5;
+  /* margin: auto auto; */
+}
+
+/* Navigation Bar */
+.nav-item {
+  margin: 10px;
+  cursor: pointer;
+  font-family: 'Urbanist';
+}
+
+.save {
+  border: 1px solid #69B179;
+  border-radius: 5px;
+  color: #69B179;
+  background-color: #edf8f5;
+}
+
+/* main card */
+.entry {
+  display: inline-block;
+  cursor: pointer;
+  height: 50px;
+  line-height: 50px;
+
+}
+
+/* Checkbox */
+.checkboxCont {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+}
+
+
+.card {
+  align-items: center;
+  font-family: 'Poppins';
+  text-align: left;
+  width: 95%;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 0px 0px;
+}
+
+.txtCont {
+  display: block;
+
+}
+
+.dateNum {
+  font-size: 16px;
+}
+
+
+.dateIcon {
+  border: 2px solid rgb(236, 237, 237);
+  border-radius: 8px;
+  background-color: rgb(249, 249, 248);
+  padding: 10px 10px;
+  margin: 10px 10px;
+  line-height: .8;
+  display: inline-block;
+  text-align: center;
+}
