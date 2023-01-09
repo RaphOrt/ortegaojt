@@ -31,7 +31,7 @@ function App() {
 
   const AppData = (e) => {
     setdata(e)
-    // console.log(setref)
+
   }
 
 

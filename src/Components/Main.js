@@ -15,7 +15,7 @@ function Main({ appData, maintoApp }) {
     var arrowref = useRef([]);
     var tagsref = useRef([]);
     var timeref = useRef([]);
-    // var timekey = useRef([]);
+
 
     const handleCheck = (event) => {
         var updatedList = [...checked];
@@ -40,7 +40,7 @@ function Main({ appData, maintoApp }) {
         }
     }
     function togglecontent({ key }, { data }) {
-        // setToggle(!toggle);
+
         var toggle = data.toggle;
         if (toggle == true) {
             data.toggle = false;
