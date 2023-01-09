@@ -55,7 +55,7 @@ function App() {
       <div className='status'>
 
         <small className='unread'>Unread</small>
-        <div className='circle3'>3<img className='arrowimg' src={arrowimg} /></div>
+        <div className='circle3'>100<img className='arrowimg' src={arrowimg} /></div>
       </div>
       <Main appData={AppData} maintoApp={update} />
     </div>

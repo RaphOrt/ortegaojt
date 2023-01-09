@@ -58,10 +58,10 @@ code {
   height: 25px;
   width: 25px;
   color: white;
-  font-size: 14px;
+  font-size: 8px;
   background-color: #c6c5c6;
   border-radius: 50%;
-  line-height: 1.8;
+  line-height: 3;
   padding-left: 1px;
 }
 
@@ -70,6 +70,8 @@ code {
 }
 
 .arrowimg {
+  position: relative;
+  top: 2px;
   width: 10px;
 }
 
@@ -79,7 +81,8 @@ code {
 
 .ta {
   display: inline-block;
-  /* line-height: 1; */
+  font-size: 16px;
+  /* line-height: 1.5; */
   /* margin-bottom: -50px; */
 }
 
@@ -87,6 +90,7 @@ code {
 nav {
   margin: 15px 0px 15px 35px;
   text-align: left;
+  color: rgb(238, 239, 239);
 }
 
 .navBar {
@@ -127,16 +131,22 @@ nav {
   font-family: 'Poppins';
   float: right;
   margin-right: 40px;
-
+  color: gray;
 
 }
 
 
 /* main card */
+.carditemsCont {
+  width: 13%;
+  display: inline-block;
+}
+
 .entry {
   display: inline-block;
   cursor: pointer;
   height: 90px;
+  width: 84%;
 }
 
 .drag {
@@ -166,11 +176,58 @@ nav {
 .subSubj {
   display: block;
   margin-left: 10px;
+
 }
 
 .greySub {
   color: #969596;
 }
+
+.tags {
+  margin-top: 15px;
+  float: right;
+  margin-right: 20px;
+}
+
+.tagCont {
+
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+
+  flex-wrap: wrap;
+  width: 150px;
+}
+
+.tags2 {
+  margin-right: 35px;
+  float: right;
+
+}
+
+.tagItem {
+  padding: 2px 6px;
+  margin: 2px;
+  font-size: 10px;
+  color: #89c5d9;
+  background-color: #f3f9fb;
+  border: 2px solid #89c5d9;
+  border-radius: 6px;
+}
+
+.datetime {
+  margin-top: 25px;
+  float: right;
+
+}
+
+.dropdown {
+  margin-top: 25px;
+  margin-left: 20px;
+  float: right;
+  transform: rotate(-90deg);
+}
+
 
 /* Checkbox */
 .checkboxCont {
@@ -356,4 +413,16 @@ nav {
 
   margin-top: 20px;
   padding: 0px 20px 20px;
+}
+
+.datetime {
+  vertical-align: middle;
+  color: #F5D06C;
+  background-color: #fef9ee;
+  border-radius: 8px;
+  padding: 0px 5px;
+}
+
+.clock {
+  width: 10px;
 }
