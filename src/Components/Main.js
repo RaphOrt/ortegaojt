@@ -1,6 +1,6 @@
 import React, { Component, useState, useEffect, useRef } from 'react';
 import posts from '../MOCK_DATA.json';
-
+import dragimg from './image/drag.png';
 
 
 function Main({ appData, maintoApp }) {
@@ -61,31 +61,58 @@ function Main({ appData, maintoApp }) {
             {posts.map((data, key) => {
                 return (
                     <div className='card' id={key} key={key}>
+                        <div className='drag'>
+                            <img className='dragicon' src={dragimg}></img>
+                        </div>
                         <div className='checkboxCont'>
-
-                            <input className='checkboxes' id="checkboxes" type="checkbox" ref={(e) => { ref.current[key] = e }} value={key} onChange={handleCheck}></input>
-                            <label for='checkboxes'></label>
+                            <div className='control-group'>
+                                <label class="control control-checkbox">
+                                    <input className='checkboxes' id="checkboxes" type="checkbox" ref={(e) => { ref.current[key] = e }} value={key} onChange={handleCheck} />
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                        </div>
+                        <div className='activeCircle'>
                             <div className='circle'></div>
                         </div>
 
                         <a className='entry' key={key} onClick={() => togglecontent({ key }, { data })}>
-                            <div>
-                                <div className='dateIcon'>
-                                    <strong className='dateNum'>
-                                        {new Date(data.date).getDate()}
-                                    </strong>
-                                    <small className='txtCont'>
-                                        {new Date(data.date).toLocaleString('default', { month: 'short' })}
-                                    </small>
-                                </div>
-                                <div className='circle2'>TA</div>
-                                {data.senderF}
-                                <div ref={(e) => { refdiv.current[key] = e }} style={{ display: 'none' }}>
-                                    {data.content}
+                            <div className='dateIcon'>
+                                <strong className='dateNum'>
+                                    {new Date(data.date).getDate()}
+                                </strong>
+                                <small className='txtCont'>
+                                    {new Date(data.date).toLocaleString('default', { month: 'short' })}
+                                </small>
+                            </div>
+                            <div className='circleCont'>
+                                <div className='circle2'>
+                                    <bold className='ta'>
+                                        TA
+                                    </bold>
                                 </div>
                             </div>
+                            <div className='subjCont'>
+                                <strong className='subject'>
+                                    Fwd: {data.email_subject}
+                                </strong>
+                                <div className='subSubj'>
+                                    <small>{data.senderF} {data.senderL}</small> <small className='greySub'> &lt; {data.email} &gt; {new Date(data.date).toLocaleString('default', { month: 'long', day: '2-digit', year: 'numeric' })} at {data.time}</small>
+                                </div>
+                            </div>
+
                         </a>
-                        <div></div>
+                        <div className='contentCont' ref={(e) => { refdiv.current[key] = e }} style={{ display: 'none' }}>
+                            <hr class="dashedHR" />
+                            <div>
+                                <strong>{data.senderF} {data.senderL}</strong>
+                            </div>
+                            <div>
+                                <small className='greySub'>{new Date(data.date).toLocaleString('default', { month: 'long', day: '2-digit', year: 'numeric' })} at {data.time}</small>
+                            </div>
+                            {data.content}
+                        </div>
+
 
                     </div>
                 )

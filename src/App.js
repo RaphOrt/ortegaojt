@@ -3,6 +3,9 @@ import './App.css';
 import posts from './MOCK_DATA.json';
 import Main from './Components/Main.js';
 import saveimg from './Components/image/save.png';
+import filterimg from './Components/image/filters.png';
+import deleteimg from './Components/image/delete.png';
+import arrowimg from './Components/image/down-arrow.png';
 
 
 function App() {
@@ -35,17 +38,25 @@ function App() {
   return (
     <div className="App">
 
-      <div>
+      <div className='navBar'>
         <nav>
           <input type="checkbox"></input>
-          <a className='nav-item save'>Save<img src={saveimg} /></a>
-          <a className='nav-item'>Manage Filters</a>
+          <a className='nav-item save'>SAVE <img src={saveimg} /></a>
+          <a className='nav-item manage'>MANAGE FILTERS <img src={filterimg} /></a>
           <a>  |  </a>
-          <a className='nav-item' id='delete' onClick={deletearr}>Delete</a>
+          <a className='nav-item delete' id='delete' onClick={deletearr}>DELETE <img src={deleteimg} /></a>
+          <div className='paging'>
+            <small>
+              <a>&lt;     </a>100 of 100<a>     &gt;</a>
+            </small>
+          </div>
         </nav>
       </div>
-      <hr></hr>
-      <small>Unread</small>
+      <div className='status'>
+
+        <small className='unread'>Unread</small>
+        <div className='circle3'>3<img className='arrowimg' src={arrowimg} /></div>
+      </div>
       <Main appData={AppData} maintoApp={update} />
     </div>
   );
